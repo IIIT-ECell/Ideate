@@ -1,6 +1,7 @@
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import type { Metadata } from "next";
+import Card from "@/app/components/card";
 
 export const metadata: Metadata = {
   title: "Dashboard",
@@ -24,18 +25,51 @@ export default async function Dashboard() {
 
   const user = await getUser();
 
+  const cards = [
+    Card({
+      title: "A very cool idea",
+      description:
+        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+      tags: ["banana", "kela"],
+    }),
+    Card({
+      title: "A very cool idea",
+      description:
+        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+      tags: ["banana", "kela"],
+    }),
+    Card({
+      title: "A very cool idea",
+      description:
+        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+      tags: ["banana", "kela"],
+    }),
+    Card({
+      title: "A very cool idea",
+      description:
+        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+      tags: ["banana", "kela"],
+    }),
+    Card({
+      title: "A very cool idea",
+      description:
+        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+      tags: ["banana", "kela"],
+    }),
+    Card({
+      title: "A very cool idea",
+      description:
+        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+      tags: ["banana", "kela"],
+    }),
+  ];
+
   return (
-    <main className="flex flex-col min-h-screen items-center justify-center bg-black text-white">
-      <h1>Dashboard</h1>
-      <LogoutLink>Log Out</LogoutLink>
-      {user?.email}
-      {user?.picture ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={user?.picture} alt="profile picture" />
-      ) : (
-        <div>ok</div>
-      )}
-      {user?.given_name} {user?.family_name}
+    <main className="min-h-screen bg-black text-white flex flex-col text-6xl p-24">
+      <h1 className="py-4">Dashboard</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6">
+        {cards.map((card) => card)}
+      </div>
     </main>
   );
 }
