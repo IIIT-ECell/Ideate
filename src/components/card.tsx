@@ -10,19 +10,17 @@ interface CardsProps {
 
 const Cards: React.FC<CardsProps> = ({ title, description, tags }) => {
   return (
-    <div className="max-w-sm rounded-xl overflow-hidden transition-all shadow-lg mr-8 mt-8 bg-slate-900 hover:transform hover:scale-105 hover:translate-y-1 hover:neon-slate">
+    <div className="max-w-sm rounded-xl h-[36rem] transition-all mr-8 mt-8 bg-opacity-20 bg-slate-900 hover:bg-opacity-60 hover:transform hover:scale-105 hover:translate-y-1 hover:neon-slate">
       <Image
-        className="w-full text-lg rounded-md"
+        className="h-2/6 w-full text-lg rounded-md"
         src={sampleImage}
         alt={title}
-        width="10"
-        height="10"
       />
-      <div className="px-6 py-4">
+      <div className="h-3/6 px-6 py-4">
         <div className="font-bold text-xl mb-2">{title}</div>
-        <p className="text-white-700 text-base">{description}</p>
+        <p className="text-base line-clamp-[10]">{description}</p>
       </div>
-      <div className="px-6 pt-4 pb-2">
+      <div className="h-1/6 px-6 pt-4 pb-2">
         {tags.map((tag, index) => (
           <span
             key={index}

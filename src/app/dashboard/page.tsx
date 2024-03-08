@@ -29,9 +29,9 @@ export default async function Dashboard() {
     Card({
       title: "A very cool idea",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, et at. Id obcaecati nostrum ipsam dicta illo quam magni iste explicabo veniam, perspiciatis officia ea inventore provident qui dolorem culpa.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, et at. Id obcaecati nostrum ipsam dicta illo quam magni iste explicabo veniam, perspiciatis officia ea inventore provident qui dolorem culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, et at. Id obcaecati nostrum ipsam dicta illo quam magni iste explicabo veniam, perspiciatis officia ea inventore provident qui dolorem culpa.",
       tags: ["banana", "kela"],
-    }),
+    })
   );
 
   return (
