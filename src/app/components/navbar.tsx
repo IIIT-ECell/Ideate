@@ -2,7 +2,6 @@
 
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import {
   HomeIcon,
   UserIcon,
@@ -11,9 +10,6 @@ import {
 } from "@heroicons/react/24/solid";
 
 export default function Navbar() {
-  //   const isPathActive = (path) => {
-  //     return router.pathname === path;
-  //   };
   return (
     <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-auto bg-slate-900 h-16 flex items-center justify-center align-middle rounded-3xl p-4">
       <ul className="flex justify-center space-x-4 p-2">
