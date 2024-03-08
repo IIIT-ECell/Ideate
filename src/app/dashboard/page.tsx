@@ -1,7 +1,7 @@
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import type { Metadata } from "next";
-import Card from "@/app/components/card";
+import Card from "@/components/card";
 
 export const metadata: Metadata = {
   title: "Dashboard",
@@ -25,44 +25,14 @@ export default async function Dashboard() {
 
   const user = await getUser();
 
-  const cards = [
+  const cards = Array(20).fill(
     Card({
       title: "A very cool idea",
       description:
-        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, et at. Id obcaecati nostrum ipsam dicta illo quam magni iste explicabo veniam, perspiciatis officia ea inventore provident qui dolorem culpa.",
       tags: ["banana", "kela"],
     }),
-    Card({
-      title: "A very cool idea",
-      description:
-        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-      tags: ["banana", "kela"],
-    }),
-    Card({
-      title: "A very cool idea",
-      description:
-        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-      tags: ["banana", "kela"],
-    }),
-    Card({
-      title: "A very cool idea",
-      description:
-        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-      tags: ["banana", "kela"],
-    }),
-    Card({
-      title: "A very cool idea",
-      description:
-        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-      tags: ["banana", "kela"],
-    }),
-    Card({
-      title: "A very cool idea",
-      description:
-        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
-      tags: ["banana", "kela"],
-    }),
-  ];
+  );
 
   return (
     <main className="min-h-screen bg-black text-white flex flex-col text-6xl p-24">

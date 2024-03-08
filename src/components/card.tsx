@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+import sampleImage from "@/assets/sample.jpg";
 
 interface CardsProps {
   title: string;
@@ -9,10 +11,12 @@ interface CardsProps {
 const Cards: React.FC<CardsProps> = ({ title, description, tags }) => {
   return (
     <div className="max-w-sm rounded-xl overflow-hidden transition-all shadow-lg m-4 bg-slate-900 hover:transform hover:scale-105 hover:translate-y-1 hover:drop-shadow-[0px_60px_40px_rgba(30,40,60,1.0)]">
-      <img
+      <Image
         className="w-full text-lg rounded-md"
-        src="https://i.pinimg.com/originals/c9/2f/e8/c92fe814f244075c3b7ed54ac371a358.jpg"
-        alt="dwabhkda"
+        src={sampleImage}
+        alt={title}
+        width="10"
+        height="10"
       />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{title}</div>
