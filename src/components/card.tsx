@@ -10,7 +10,7 @@ interface CardsProps {
 
 const Cards: React.FC<CardsProps> = ({ title, description, tags }) => {
   return (
-    <div className="max-w-sm rounded-xl overflow-hidden transition-all shadow-lg m-4 bg-slate-900 hover:transform hover:scale-105 hover:translate-y-1 hover:drop-shadow-[0px_60px_40px_rgba(30,40,60,1.0)]">
+    <div className="max-w-sm rounded-xl overflow-hidden transition-all shadow-lg mr-8 mt-8 bg-slate-900 hover:transform hover:scale-105 hover:translate-y-1 hover:neon-slate">
       <Image
         className="w-full text-lg rounded-md"
         src={sampleImage}
