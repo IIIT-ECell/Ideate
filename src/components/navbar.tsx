@@ -11,7 +11,7 @@ import {
 
 export default function Navbar() {
   return (
-    <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-auto bg-slate-900 h-16 flex items-center justify-center align-middle rounded-3xl p-4">
+    <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-auto bg-slate-900 h-16 flex items-center justify-center align-middle rounded-3xl p-4 z-50">
       <ul className="flex justify-center space-x-4 p-2">
         <li>
           <Link
@@ -23,7 +23,7 @@ export default function Navbar() {
         </li>
         <li>
           <Link
-            href="/create"
+            href="/add-idea"
             className="text-white hover:text-gray-400 transition-colors duration-300"
           >
             <PencilSquareIcon className="w-6 h-6" />
