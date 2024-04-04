@@ -1,0 +1,20 @@
+User table
+- name: string
+- email: string
+- date_of_birth: date
+- pfp: url
+- college: string | None
+- branch: string
+- batch: dropdown of UG1 UG2 .. PG1 ..
+
+Idea table
+- title: string
+- description: string
+- tags: list[string]
+- author: User | None
+- status: (Open, Ongoing, Closed)
+
+Status table
+- idea: Idea
+- user: User
+- status: (Waiting, Accepted, Rejected)
