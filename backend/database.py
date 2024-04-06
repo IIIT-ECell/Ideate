@@ -27,6 +27,9 @@ class Database:
     def find_ideas_by_email(self, email: str) -> list[Idea]:
         return list(filter(lambda idea: idea.author.email == email, self.ideas))
 
+    def find_ideas_by_status(self, status: str) -> list[Idea]:
+        return list(filter(lambda idea: idea.status.value == status, self.ideas))
+
     def find_user(self, email: str) -> User | None:
         for user in self.users:
             if user.email == email:

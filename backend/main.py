@@ -62,6 +62,10 @@ def get_idea_by_title(title: str):
 def get_ideas_by_email(email: str):
     return db.find_ideas_by_email(email)
 
+@app.get("/idea/status/{status}")
+def get_ideas_by_status(status: str):
+    return db.find_ideas_by_status(status)
+
 
 @app.post("/idea")
 def post_idea(idea: Idea):
