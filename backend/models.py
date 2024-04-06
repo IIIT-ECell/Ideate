@@ -33,6 +33,6 @@ class Idea(BaseModel):
     title: str
     description: str
     tags: list[str]
-    author: User | None
+    author: User
     status: IdeaStatus
     applicants: list[Applicant]

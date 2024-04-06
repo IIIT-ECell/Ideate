@@ -44,7 +44,8 @@ def get_user(email: str):
 
 @app.post("/user")
 def post_user(user: User):
-    return db.add_user(user)
+    db.add_user(user)
+    return "added user"
 
 
 @app.get("/ideas")
@@ -52,9 +53,14 @@ def get_ideas():
     return db.ideas
 
 
-@app.get("/idea/{title}")
-def get_idea(title: str):
-    return db.find_idea(title)
+@app.get("/idea/title/{title}")
+def get_idea_by_title(title: str):
+    return db.find_idea_by_title(title)
+
+
+@app.get("/idea/email/{email}")
+def get_ideas_by_email(email: str):
+    return db.find_ideas_by_email(email)
 
 
 @app.post("/idea")

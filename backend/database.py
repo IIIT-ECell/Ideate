@@ -19,10 +19,13 @@ class Database:
         except FileNotFoundError:
             self.users = []
 
-    def find_idea(self, title: str) -> Idea | None:
+    def find_idea_by_title(self, title: str) -> Idea | None:
         for idea in self.ideas:
             if idea.title == title:
                 return idea
+
+    def find_ideas_by_email(self, email: str) -> list[Idea]:
+        return list(filter(lambda idea: idea.author.email == email, self.ideas))
 
     def find_user(self, email: str) -> User | None:
         for user in self.users:
